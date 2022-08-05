@@ -31,7 +31,7 @@ namespace Factory.Controllers
     public ActionResult Create(Engineer engineer)
     {
       _db.Engineers.Add(engineer);
-      _db.SaveChangfes();
+      _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
@@ -46,7 +46,7 @@ namespace Factory.Controllers
 
     public ActionResult Edit(int id)
     {
-      engineer thisEngineer = _db.Engineer.FirstOrDefault(engineer => engineer.engineerId == id);
+      Engineer thisEngineer = _db.Engineer.FirstOrDefault(engineer => engineer.EngineerId == id);
       ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
       return View(thisEngineer);
     }

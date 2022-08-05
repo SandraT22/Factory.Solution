@@ -9,9 +9,9 @@ namespace Factory.Controllers
 {
   public class MachinesController : Controller
   {
-private readonly FactoryContext _db;
+    private readonly FactoryContext _db;
 
-    public ItemsController(FactoryContext db)
+    public MachinesController(FactoryContext db)
     {
       _db = db;
     }
@@ -30,7 +30,7 @@ private readonly FactoryContext _db;
     [HttpPost]
     public ActionResult Create(Machine machine, int EngineerId)
     {
-      _db.Machines.Add(item);
+      _db.Machines.Add(machine);
       _db.SaveChanges();
       if (EngineerId != 0)
       {
@@ -80,7 +80,7 @@ private readonly FactoryContext _db;
     {
       if (EngineerId != 0)
       {
-        _db.EngineerMachine.Add(new EngineerMachine() { EngineerId = EngineerId, MachineId = machiune.MachineId });
+        _db.EngineerMachine.Add(new EngineerMachine() { EngineerId = EngineerId, MachineId = machine.MachineId });
         _db.SaveChanges();
       }
       return RedirectToAction("Index");
@@ -96,7 +96,7 @@ private readonly FactoryContext _db;
     public ActionResult DeleteConfirmed(int id)
     {
       var thisMachine = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
-      _db.Items.Remove(thisMachine);
+      _db.Machine.Remove(thisMachine);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

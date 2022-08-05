@@ -1,4 +1,4 @@
-<!-- @{
+@{
   Layout = "_Layout";
 }
 
@@ -6,8 +6,19 @@
 
 <h2>Edit</h2>
 
-<h4>Edit this machine: @Html.DisplayFor(model => model.Description)</h4>
+<h4>Edit this machine: @Html.DisplayFor(model => model.Name)</h4>
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MachineId)
+
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+
+  @Html.Label("Select Engineer")
+  @Html.DropDownList("EngineerId")
+
+  <input type="submit" value="Save" />
+}
 
 
-
-<p>@Html.ActionLink("Back to Home", "Index")</p> -->
+<p>@Html.ActionLink("Back to Home", "Index")</p>

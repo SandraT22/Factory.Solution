@@ -1,13 +1,28 @@
-<!-- @{
+@{
   Layout = "_Layout";
 }
 
-@model Factory.Models.engineer;
+@model Factory.Models.Engineer;
 
-<h2>engineer Details</h2>
+<h2>Engineer Details</h2>
 <hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>There are no machines listed for this engineer.</p>
+}
+else
+{
+  <h4>Licensed for these Machines:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Machine.Name</li>
+  }
+  </ul>
+}
 
 <p>@Html.ActionLink("Back to engineers", "Index")</p>
 <p>@Html.ActionLink("Edit engineers", "Edit", new { id = Model.EngineerId })</p>
-<p>@Html.ActionLink("Delete engineers", "Delete", new { id = Model.EngineerId })</p> -->
+<p>@Html.ActionLink("Delete engineers", "Delete", new { id = Model.EngineerId })</p>

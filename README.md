@@ -1,8 +1,8 @@
-# [YOUR PROJECT NAME HERE]
+# Factory
 
-#### By  [YOUR NAME HERE]
+#### By  Sandra Tena
 
-#### [BRIEF DESCRIPTION HERE]  
+#### A website to keep track of machines and the engineers that repair them.   
 
 ---
 
@@ -20,7 +20,7 @@
 ---
 ## Description
 
-_This is an ..._
+_This is a website that allows the user to create a list of engineers and a list of machines. It also creates a relationship between the two and allows the user to view this relationship in order to see which engineers are licenced to repair which machines and which machines have which engineers listed._
 
 ---
 ## Setup and Installation Requirements
@@ -36,25 +36,14 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 "**SQL Workbench Configuration**" > "2. Insert the following code:"
 
 <details>
-<summary><strong>Template Setup</strong></summary>
-<ol>
-<li>Navigate to https://github.com/SandraT22/MvcTemplate.Solution
-<li>Open a terminal and navigate to your Desktop with <strong>cd</strong> command
-<li>Run,   
-<strong>$ git clone https://github.com/SandraT22/MvcTemplate.Solution.git</strong>
-<li>Be sure to rename everything so that it matches your project!
-<br>
-</details>
-
-<details>
 <summary><strong>Initial Setup</strong></summary>
 <ol>
-<li>Copy the git repository url: [YOUR GITHUB PROJECT LINK HERE]
+<li>Copy the git repository url: https://github.com/SandraT22/Factory.Solution
 <li>Open a terminal and navigate to your Desktop with <strong>cd</strong> command
 <li>Run,   
-<strong>$ git clone [YOUR GITHUB PROJECT LINK HERE]</strong>
-<li>In the terminal, navigate into the root directory of the cloned project folder "[YOUR REPO NAME HERE]".
-<li>Navigate to the projects root directory, "[YOUR MAIN PROJECT DIRECTORY NAME HERE]".
+<strong>$ git clone https://github.com/SandraT22/Factory.Solution.git</strong>
+<li>In the terminal, navigate into the root directory of the cloned project folder "Factory.Solution".
+<li>Navigate to the projects root directory, "Factory".
 <li>Move onto "SQL Workbench Configuration" instructions below to build the necessary database.
 <br>
 </details>
@@ -62,9 +51,9 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 <details>
 <summary><strong>SQL Workbench Configuration</strong></summary>
 <ol>
-<li>Create an appsetting.json file in the "[YOUR MAIN PROJECT DIRECTORY NAME HERE]" directory  
-   <pre>[YOUR REPO NAME HERE]
-   └── [YOUR MAIN PROJECT DIRECTORY NAME HERE]
+<li>Create an appsetting.json file in the "Factory" directory  
+   <pre>Factory.Solution
+   └── Factory
     └── appsetting.json</pre>
 <li> Insert the following code: <br>
 
@@ -77,23 +66,23 @@ Download MySQL Workbench, follow the setup wizard & create a localhost server on
 <small>**Note: you must include your username in the code block section labeled "YOUR-USERNAME-HERE".</small><br>
 <small>***Note: if you plan to push this cloned project to a public-facing repository, remember to add the appsettings.json file to your .gitignore before doing so.</small>
 
-<li>In root directory of project folder "[YOUR MAIN PROJECT DIRECTORY NAME HERE]", run  
+<li>In root directory of project folder "Factory", run  
 <strong>$ dotnet ef migrations add restoreDatabase</strong>
 <li>Then run <strong>$ dotnet ef database update</strong>
 
 <ol> 
   <li>Open SQL Workbench.
-  <li>Navigate to "[PROJECT SCHEMA NAME HERE]" schema.
+  <li>Navigate to "factory" schema.
   <li>Click the drop down, select "Tables" drop down.
-  <li>Verify the tables, you should see <strong>[TABLE NAME HERE]</strong>, <strong>[TABLE NAME HERE]</strong>, <strong>[TABLE NAME HERE]</strong>, <strong>[TABLE NAME HERE]</strong>, & <strong>[TABLE NAME HERE]</strong>.
+  <li>Verify the tables, you should see <strong>engineers</strong>, & <strong>machines</strong>.
   
 </details>
 
 <details>
 <summary><strong>To Run</strong></summary>
 Navigate to:  
-   <pre>[YOUR REPO NAME HERE]
-   └── <strong>[YOUR MAIN PROJECT DIRECTORY NAME HERE]</strong></pre>
+   <pre>Factory.Solution
+   └── <strong>Factory</strong></pre>
 
 Run ```$ dotnet restore``` in the terminal.<br>
 Run ```$ dotnet run``` in the terminal.
@@ -109,9 +98,9 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 
 ## License
 
+MIT
 
-
-Copyright (c) 8/3/2022 [YOUR NAME HERE] 
+Copyright (c) 2022 Sandra Tena 
 
 ## Contact Information
 _If you have any questions or concerns, please feel free to reach out to me [via email at: YOUR EMAIL HERE](mailto:YOUR EMAIL HERE) or request to make a contribution. Thank you!_ 
